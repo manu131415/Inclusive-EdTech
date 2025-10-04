@@ -1,0 +1,21 @@
+READ4ALL/
+│
+├── backend/               👈 Python FastAPI backend
+│   ├── main.py            👈 move main.py here
+|   ├── models.py        
+│   ├── database.py          
+│   ├── tts_cache/         👈 move cache here
+│   └── requirements.txt   👈 list packages (fastapi, uvicorn, gTTS)
+│
+├── read4all/              👈 React frontend
+│   ├── node_modules/
+│   ├── public/
+│   └── src/
+│       ├── assets/
+│       ├── App.tsx
+│       ├── main.tsx
+│       └── ...other frontend files
+│
+├── package.json
+├── tsconfig.json
+└── README.md
