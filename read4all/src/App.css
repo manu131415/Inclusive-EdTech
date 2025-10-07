@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lexend";
+  animation: bg all 0.3 infinite linear;
+}
+@keyframes bg {
+  0% {background-color: #ff9a9e;}
+  25% {background-color: #fad0c4;}
+  50% {background-color: #fbc2eb;}
+  75% {background-color: #a18cd1;}
+  100% {background-color: #fbc2eb;}
 }
 .nav-button{
   flex-direction: column;
