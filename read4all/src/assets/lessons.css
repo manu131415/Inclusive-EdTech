@@ -1,0 +1,44 @@
+.lessons-container{
+    background-color: white;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    box-shadow: 5px 10px rgba(75, 71, 71, 0.1);
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    flex: 1;
+     font-size: medium;
+  color: black;
+  position: relative;
+  z-index: 10;
+  border-radius: 15px;
+}
+.lessons-container:hover{
+    box-shadow: 5px 10px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.lesson-item{
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+.lesson-item:hover{
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+.lesson-item:active{
+    background-color: #e0e0e0;
+}
+p{
+    line-height: 1.6;
+    color: #333;
+}
