@@ -1,18 +1,9 @@
 .lessons-container{
-    background-color: white;
+    color: white;
     align-items: center;
     width: 80%;
-    margin: auto;
     box-shadow: 5px 10px rgba(75, 71, 71, 0.1);
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    flex: 1;
-     font-size: medium;
-  color: black;
-  position: relative;
-  z-index: 10;
-  border-radius: 15px;
+    
 }
 h2{
     color: white;
@@ -45,4 +36,140 @@ ul{
 p{
     line-height: 1.6;
     color: #333;
+}
+section{
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+}
+section h2{
+  color: black;
+  margin-bottom: 10px;
+  z-index: inherit;
+}
+section p{
+  line-height: 1.6;
+  color: #333;
+  z-index: inherit  ;
+}
+section:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  z-index: inherit;
+}
+.app-container{
+  font-size: medium;
+  position: relative;
+  z-index: 10;
+  border-radius: 20px;
+  background-color: #edc6ee;
+  display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.app-container h2{
+  color: black;
+  font-size: xx-large;
+  text-align: center;
+  z-index: inherit;
+}
+.app-container input{
+    z-index: inherit;
+    border-radius: 20px;
+    width:100%;
+}
+.app-container li{
+  color: black;
+  z-index: inherit;
+  text-align: center;
+}
+.app-container:hover{
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+input{
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 20px;
+    width:100%;
+}
+textarea{
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    width:100%;
+    font-size: x-large;
+}
+/* .available-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  flex: 1;
+  font-size: medium;
+  color: black;
+  position: relative;
+  z-index: 10;
+  background-color: #ccc;
+} */
+ .private-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  flex: 1;
+  font-size: medium;
+  color: black;
+  position: relative;
+  z-index: 10;
+  background-color: #f1d3ec;}
+section{
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+}
+section h2, h3{
+  color: black;
+  margin-bottom: 10px;
+  z-index: inherit;
+  font-size: xx-large;
+}
+section h2, h3 , p, small{
+  color: #000;
+}
+section p{
+  line-height: 1.6;
+  color: #080808;
+  z-index: inherit  ;
+}
+section:hover{
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  z-index: inherit;
 }

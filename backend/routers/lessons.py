@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 import models, schemas
+from database import SessionLocal
 
 router = APIRouter()
 
@@ -11,6 +12,10 @@ def get_db():
         yield db
     finally:
         db.close()
+
+@router.get("/lessons", response_model=List[schemas.LessonOut])
+def get_lessons(db: Session = Depends(get_db)):
+    return db.query(models.Lesson).all()
 
 @router.post("/lessons", response_model=schemas.LessonOut)
 def create_lesson(lesson: schemas.LessonCreate, db: Session = Depends(get_db)):
@@ -25,9 +30,7 @@ def create_lesson(lesson: schemas.LessonCreate, db: Session = Depends(get_db)):
     db.refresh(db_lesson)
     return db_lesson
 
-@router.get("/lessons", response_model=List[schemas.LessonOut])
-def get_lessons(db: Session = Depends(get_db)):
-    return db.query(models.Lesson).all()
+
 
 @router.get("/lessons/{lesson_id}", response_model=schemas.LessonOut)
 def get_lesson(lesson_id: int, db: Session = Depends(get_db)):

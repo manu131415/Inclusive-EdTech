@@ -38,7 +38,7 @@ function App() {
         <Navbar setView={setView} />
 
         {view === "home" && (
-          <div className="app-container">
+          <div className="home-container">
             <Home />
             <About />
             

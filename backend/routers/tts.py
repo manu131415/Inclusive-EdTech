@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 from pathlib import Path
 import io
 import models
+from database import SessionLocal
 
 
 router = APIRouter()

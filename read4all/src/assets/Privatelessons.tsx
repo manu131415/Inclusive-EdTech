@@ -1,17 +1,17 @@
 // PrivateLessons.tsx
 import { useEffect, useState } from "react";
 import "./lessons.css"
+import sampleLessons from "./samplelessons.ts";
 
 interface Lesson {
   id: number;
   title: string;
   text: string;
   language: string;
-  created_by: string;
 }
 
 export default function PrivateLessons() {
-  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>(sampleLessons);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -20,7 +20,6 @@ export default function PrivateLessons() {
       try {
         const res = await fetch("http://localhost:8000/lessons", {
           method: "GET",
-          credentials: "include", // if you use cookies for auth
         });
         if (!res.ok) throw new Error("Failed to fetch lessons");
         const data = await res.json();
@@ -39,7 +38,9 @@ export default function PrivateLessons() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="lessons-container">
+    <>
+    <section className="private-container">
+      <div className="lessons-container">
       <h2>Private Lessons</h2>
       <ul>
         {lessons.map((lesson) => (
@@ -51,5 +52,7 @@ export default function PrivateLessons() {
         ))}
       </ul>
     </div>
+  </section>
+  </>
   );
 }

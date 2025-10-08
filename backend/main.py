@@ -12,8 +12,6 @@ from database import SessionLocal, engine, Base
 import models, schemas, utils
 from routers import tts, lessons, auth
 
-
-
 # Create tables in MySQL
 models.Base.metadata.create_all(bind=engine)
 

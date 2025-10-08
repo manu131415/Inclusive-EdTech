@@ -24,7 +24,7 @@ export default function Signup() {
   };
 
   return (
-    <div className="app-container">
+    <div className="login-container">
       <form className="form" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: 400, margin: "2rem auto" }}>
       <h2>Signup</h2>
       <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} required />
