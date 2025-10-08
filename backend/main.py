@@ -10,8 +10,7 @@ from pydantic import BaseModel
 from typing import List
 
 from database import SessionLocal, engine, Base
-from backend import models
-from . import models, schemas, utils
+import models, schemas, utils
 
 # Create tables in MySQL
 models.Base.metadata.create_all(bind=engine)
