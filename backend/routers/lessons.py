@@ -30,11 +30,20 @@ def create_lesson(lesson: schemas.LessonCreate, db: Session = Depends(get_db)):
     db.refresh(db_lesson)
     return db_lesson
 
-
-
 @router.get("/lessons/{lesson_id}", response_model=schemas.LessonOut)
 def get_lesson(lesson_id: int, db: Session = Depends(get_db)):
     lesson = db.query(models.Lesson).filter(models.Lesson.id == lesson_id).first()
     if not lesson:
         raise HTTPException(status_code=404, detail="Lesson not found")
+    return lesson
+
+# DELETE a lesson by ID
+@router.delete("/lessons/{lesson_id}", response_model=schemas.LessonOut)
+def delete_lesson(lesson_id: int, db: Session = Depends(get_db)):
+    lesson = db.query(models.Lesson).filter(models.Lesson.id == lesson_id).first()
+    if not lesson:
+        raise HTTPException(status_code=404, detail="Lesson not found")
+    
+    db.delete(lesson)
+    db.commit()
     return lesson
