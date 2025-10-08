@@ -20,7 +20,7 @@ export default function Lessons() {
 
     try {
       const response = await fetch(
-        `http://localhost:8001/tts?text=${encodeURIComponent(text)}&lang=en`
+        `http://localhost:8000/tts?text=${encodeURIComponent(text)}&lang=en`
       );
       if (!response.ok) throw new Error("TTS request failed");
 
@@ -34,7 +34,7 @@ export default function Lessons() {
 
   const playAudio = (lesson: Lesson) => {
     const audio = new Audio(
-      `http://localhost:8001/tts?text=${encodeURIComponent(
+      `http://localhost:8000/tts?text=${encodeURIComponent(
         lesson.text
       )}&lang=${lesson.language}`
     );

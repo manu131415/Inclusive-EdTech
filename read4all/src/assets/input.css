@@ -31,4 +31,5 @@ input, textarea{
   color: white;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 100;
 }

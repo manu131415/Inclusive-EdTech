@@ -1,7 +1,7 @@
 import React from "react";
 
 interface NavbarProps {
-  setView: React.Dispatch<React.SetStateAction<"home" | "lesson" |"login" | "signup">>;
+  setView: React.Dispatch<React.SetStateAction<"home" | "lesson" |"login" | "signup" | "privateLessons">>;
 }
 
 function Navbar({ setView }: NavbarProps) {

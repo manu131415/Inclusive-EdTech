@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr
 
 class UserCreate(BaseModel):
-    username: str
+    name: str
     email: EmailStr
     password: str
 
@@ -9,9 +9,23 @@ class UserLogin(BaseModel):
     email: EmailStr
     password: str
 
+# Pydantic schema for lessons
+class LessonCreate(BaseModel):
+    title: str
+    text: str
+    language: str = "en"
+    created_by: int = 1  # temporary default user
+
+class LessonOut(BaseModel):
+    id: int
+    title: str
+    text: str
+    language: str
+    created_by: int
+
 class UserOut(BaseModel):
     id: int
-    username: str
+    name: str
     email: EmailStr
 
     class Config:

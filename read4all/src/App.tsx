@@ -8,9 +8,12 @@ import "./App.css";
 import About from "./assets/About";
 import Footer from "./assets/Footer";
 import ColorBubbleBackground from "./assets/BackgroundAnimationWA";
+import ErrorBoundary from "./assets/Errorboundary";
+import PrivateLessons from "./assets/Privatelessons";
+
 
 function App() {
-  const [view, setView] = useState<"home" | "lesson" |"login" | "signup">("home");
+  const [view, setView] = useState<"home" | "lesson" |"login" | "signup" | "privateLessons">("home");
   
 
  
@@ -41,8 +44,9 @@ function App() {
             
           </div>
         )}
-        {view === "lesson" && <Lessons />}
-        {view === "login" && <Login/>}
+        {view === "lesson" && <ErrorBoundary><Lessons /></ErrorBoundary>}
+        {view === "login" && <Login setView={setView}/>}
+        {view === "privateLessons" && <ErrorBoundary><PrivateLessons /></ErrorBoundary>}
         {view === "signup" && <Signup/>}
         <Footer />
       </div>
