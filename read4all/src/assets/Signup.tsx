@@ -12,11 +12,11 @@ export default function Signup() {
       const res = await fetch("http://localhost:8000/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ name, email, password }),
       });
       if (!res.ok) throw new Error("Signup failed");
       const data = await res.json();
-      alert(`Signup successful! Welcome ${data.username}`);
+      alert(`Signup successful! Welcome ${data.name}`);
     } catch (err) {
       console.error(err);
       alert("Error signing up");

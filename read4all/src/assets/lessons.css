@@ -2,17 +2,11 @@
     color: white;
     align-items: center;
     width: 80%;
-    box-shadow: 5px 10px rgba(75, 71, 71, 0.1);
-    
+    border: 1px solid black;
 }
 h2{
     color: white;
     text-align: center;
-}
-.lessons-container:hover{
-    box-shadow: 5px 10px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
 }
 ul{
     list-style: none;
@@ -116,33 +110,33 @@ textarea{
     width:100%;
     font-size: x-large;
 }
-/* .available-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 80%;
-  margin: auto;
-  padding: 2rem;
-  flex: 1;
-  font-size: medium;
-  color: black;
-  position: relative;
-  z-index: 10;
-  background-color: #ccc;
-} */
  .private-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
   margin: auto;
-  padding: 2rem;
+  padding: 2px;
   flex: 1;
   font-size: medium;
   color: black;
   position: relative;
   z-index: 10;
-  background-color: #f1d3ec;}
+  background-color: #f1d3ec;
+  height: fixed 100vh;
+  overflow-y: scroll;
+  border-radius: 20px;
+}
+.private-container::-webkit-scrollbar {
+  width: 8px;
+}
+.private-container h2{
+  color: black;
+  font-size: xx-large;
+  text-align: center;
+  z-index: inherit;
+  text-decoration: underline;
+}
 section{
   border: 1px solid black;
   padding: 20px;

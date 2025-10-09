@@ -39,9 +39,9 @@ export default function PrivateLessons() {
 
   return (
     <>
-    <section className="private-container">
+    <div className="private-container">
+       <h2>Private Lessons</h2> <br/>
       <div className="lessons-container">
-      <h2>Private Lessons</h2>
       <ul>
         {lessons.map((lesson) => (
           <li key={lesson.id} style={{ marginBottom: "1rem" }}>
@@ -52,7 +52,7 @@ export default function PrivateLessons() {
         ))}
       </ul>
     </div>
-  </section>
+  </div>
   </>
   );
 }
