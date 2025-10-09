@@ -3,6 +3,10 @@
     align-items: center;
     width: 80%;
     border: 1px solid black;
+    height: 600px;
+    overflow-y: scroll;
+    margin: auto;
+    padding: 2rem;
 }
 h2{
     color: white;
@@ -116,14 +120,16 @@ textarea{
   align-items: center;
   width: 80%;
   margin: auto;
-  padding: 2px;
+  padding: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
   flex: 1;
   font-size: medium;
   color: black;
   position: relative;
   z-index: 10;
   background-color: #f1d3ec;
-  height: fixed 100vh;
+  height: 600px;
   overflow-y: scroll;
   border-radius: 20px;
 }

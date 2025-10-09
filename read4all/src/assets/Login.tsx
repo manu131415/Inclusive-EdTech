@@ -20,11 +20,9 @@ export default function Login({ setView }: LoginProps) {
       });
       if (!res.ok) throw new Error("Login failed");
 
-      const data = await res.json();
-      alert(`Welcome back, ${data.email}`);
+      // const data = await res.json();
+      alert(`Welcome back!`);
       
- 
-
       setTimeout(() => {
         setMessage("Login successful! Redirecting...");
         setView("privateLessons"); // ✅ Correct
